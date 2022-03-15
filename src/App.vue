@@ -12,6 +12,10 @@
     </div>
   </div>
 
+  <video class="karmen-video" src="/assets/flowers.mp4" controls="false" autoplay muted loop/>
+
+  <div class="karmen-video-overlay"></div>
+
   <div class="karmen-content">
     <div class="karmen-col">
       <KarmenSection
@@ -40,6 +44,9 @@ export default {
   name: 'App',
   components: {
     KarmenSection
+  },
+  mounted(){
+    
   }
 }
 </script>
@@ -49,7 +56,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
 
 body,html{
-  background-color:rgb(248,247,239);
+  /*background-color:rgb(248,247,239);*/
   height:100%;
   margin:0;
   padding:0;
@@ -97,5 +104,24 @@ body,html{
   border:none;
   border-radius:4px;
   margin:0px;
+}
+
+.karmen-video{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:-1000;
+  background-color:rgba(0,0,0,0.5)
+}
+
+.karmen-video-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:-999;
+  background-color:rgba(228,227,219,0.6);
 }
 </style>
