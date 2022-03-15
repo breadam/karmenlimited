@@ -15,23 +15,24 @@
   <video class="karmen-video" src="/assets/flowers.mp4" controls="false" autoplay muted loop/>
 
   <div class="karmen-video-overlay"></div>
-
-  <div class="karmen-content">
-    <div class="karmen-col">
-      <KarmenSection
-        link="http://guidancyeventsolutions.com" 
-        image="/assets/guidancy-logo.png"
-        title="Guidanc'y"
-        subtitle="Event Solutions & Consultancy"
-      />
-    </div>
-    <div class="karmen-col">
-      <KarmenSection
-        link="http://gingeristanbul.com"
-        image="/assets/gingeristanbul-logo.png"
-        title="Ginger"
-        subtitle="Patisserie & Catering"
-      />
+  <div class="karmen-wrapper">
+    <div class="karmen-content">
+      <div class="karmen-col">
+        <KarmenSection
+          link="http://guidancyeventsolutions.com" 
+          image="/assets/guidancy-logo.png"
+          title="Guidanc'y"
+          subtitle="Event Solutions & Consultancy"
+        />
+      </div>
+      <div class="karmen-col">
+        <KarmenSection
+          link="http://gingeristanbul.com"
+          image="/assets/gingeristanbul-logo.png"
+          title="Ginger"
+          subtitle="Patisserie & Catering"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -67,23 +68,33 @@ body,html{
 }
 
 .karmen-content{
-  height:100%;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
   display:flex;
   justify-content: center;
   font-family: 'Raleway', sans-serif;
+  background-color:rgb(240, 238, 227);
+  border-radius: 6px;
+  padding:18px 24px;
+  box-shadow:0px 2px 6px #777;
 }
 
 .karmen-col{
   display:flex;
   align-self: center;
-  margin:32px;
+  margin:48px 56px 24px 56px;
+}
+
+.karmen-content:last-child{
+  margin-left:64px;
 }
 
 .karmen-nav{
   position:fixed;
   left:0;
   right:0;
-  /*background-color:rgba(228,227,219,0.9);*/
   padding:6px 64px;
 }
 

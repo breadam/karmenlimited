@@ -1,13 +1,16 @@
 <template>
     <a :href="link">
         <div class="section">
-            <img :src="image"/>
+            <img class="logo" :src="image"/>
             <h2 class="title">
                 {{title}}
             </h2>
             <h5 class="subtitle">
                 {{subtitle}}
             </h5>
+            <!--<div>
+                <button>Visit</button>
+            </div>-->
         </div>
     </a>
 </template>
@@ -26,42 +29,33 @@ a,a:visited,a:hover, a:focus, a:active{
 
 .section{
     text-align:center;
-    max-width:256px;
-    padding:48px;
-    border-radius:4px;
+}
+
+.logo{
     transition:1s all;
-    background-color:rgba(248,247,239,1);
+    width:216px;
+    margin-bottom: 32px;
+    border-radius:50%;
 }
 
-.section:hover{
-    box-shadow:0px 2px 4px #333;
-    transform: translate(0px,-4px);
-}
-
-.section:hover .title{
-    color:rgba(50,50,50,1);
-}
-
-.section:hover .subtitle{
-    opacity:1;
+.section:hover .logo{
+    box-shadow:0px 2px 6px #333;
+    transform: translate(0px,-12px);
 }
 
 .title{
-    color:#333;
+    color:#444;
     margin:0px;
-    transition:1s all;
 }
 
 .subtitle{
-    color:#555;
+    color:#666;
     margin-top:2px;
-    
-    transition:1s all;
 }
 
-img{
-    width:196px;
-    margin-bottom: 32px;
+button{
+    padding:8px 48px;
+    font-family: inherit;
 }
 
 </style>
