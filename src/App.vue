@@ -1,37 +1,48 @@
 <template>
-  <div class="karmen-nav">
-    <div class="section left">
-    </div>
-    <div class="section right">
-      <span>
-        <select class="karmen-lang">
-          <option>Türkçe</option>
-          <option>English</option>
-        </select>
-      </span>
-    </div>
-  </div>
+  
 
   <video class="karmen-video" src="/assets/flowers.mp4" controls="false" autoplay muted loop/>
 
   <div class="karmen-video-overlay"></div>
   <div class="karmen-wrapper">
+    
     <div class="karmen-content">
-      <div class="karmen-col">
-        <KarmenSection
-          link="http://guidancyeventsolutions.com" 
-          image="/assets/guidancy-logo.png"
-          title="Guidanc'y"
-          subtitle="Event Solutions & Consultancy"
-        />
+      <div>
+        <div class="karmen-nav">
+          <div class="section left">
+          </div>
+          <div class="section right">
+            <span>
+              <select class="karmen-lang" v-model="$root.$i18n.locale">
+                <option value="tr">Türkçe</option>
+                <option value="en">English</option>
+              </select>
+            </span>
+          </div>
+        </div>
       </div>
-      <div class="karmen-col">
-        <KarmenSection
-          link="http://gingeristanbul.com"
-          image="/assets/gingeristanbul-logo.png"
-          title="Ginger"
-          subtitle="Patisserie & Catering"
-        />
+      <div class="karmen-cols">  
+        <div class="karmen-col">
+          
+          <KarmenSection
+            link="http://guidancyeventsolutions.com" 
+            image="/assets/guidancy-logo.png"
+            title="Guidanc'y"
+            :subtitle="$t('guidancy-subtitle')"
+          />
+
+        </div>
+
+        <div class="karmen-col">
+          
+          <KarmenSection
+            link="http://gingeristanbul.com"
+            image="/assets/gingeristanbul-logo.png"
+            title="Ginger"
+            :subtitle="$t('ginger-subtitle')"
+          />
+
+        </div>
       </div>
     </div>
   </div>
@@ -72,13 +83,17 @@ body,html{
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  display:flex;
-  justify-content: center;
   font-family: 'Raleway', sans-serif;
-  background-color:rgb(240, 238, 227);
+  background-color:rgb(243, 242, 234);
   border-radius: 6px;
   padding:18px 24px;
   box-shadow:0px 2px 6px #777;
+}
+
+.karmen-cols{
+  display:flex;
+  justify-content: center;
+  
 }
 
 .karmen-col{
@@ -87,34 +102,28 @@ body,html{
   margin:48px 56px 24px 56px;
 }
 
-.karmen-content:last-child{
-  margin-left:64px;
-}
-
 .karmen-nav{
-  position:fixed;
-  left:0;
-  right:0;
-  padding:6px 64px;
-}
-
-.karmen-nav .section{
+  position:relative;
 }
 
 .karmen-nav .section.left{
-  float:left;
+  position:absolute;
+  left:0;
 }
 
 .karmen-nav .section.right{
-  float:right;
+  position:absolute;
+  right:0;
 }
 
 .karmen-lang{
   text-align:left;
-  padding:6px 12px;
+  padding:6px 6px;
   border:none;
   border-radius:4px;
   margin:0px;
+  background-color:inherit;
+  outline: none;
 }
 
 .karmen-video{
