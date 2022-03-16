@@ -4,6 +4,7 @@
   <video class="karmen-video" src="/assets/flowers.mp4" controls="false" autoplay muted loop/>
 
   <div class="karmen-video-overlay"></div>
+  
   <div class="karmen-wrapper">
     
     <div class="karmen-content">

@@ -8,9 +8,9 @@
             <h5 class="subtitle">
                 {{subtitle}}
             </h5>
-            <!--<div>
-                <button>Visit</button>
-            </div>-->
+            <div>
+                <button>{{$t('visit')}}</button>
+            </div>
         </div>
     </a>
 </template>
@@ -32,10 +32,11 @@ a,a:visited,a:hover, a:focus, a:active{
 }
 
 .logo{
-    transition:1s all;
     width:216px;
     margin-bottom: 32px;
     border-radius:50%;
+
+    transition:1s all;
 }
 
 .section:hover .logo{
@@ -54,8 +55,26 @@ a,a:visited,a:hover, a:focus, a:active{
 }
 
 button{
+    width:100%;
     padding:8px 48px;
     font-family: inherit;
+    border:none;
+    border-radius:2px;
+    background-color:inherit;
+    background-color: rgb(214,233,216);
+    opacity:0;
+    transition:1s all;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: rgba(194,213,196,1);
+}
+
+.section:hover button{
+    opacity:1;
+    box-shadow:0px 2px 3px #333;
+    transform:translateY(-4px);
 }
 
 </style>
