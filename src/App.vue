@@ -125,6 +125,7 @@ body,html{
   margin:0px;
   background-color:inherit;
   outline: none;
+  color:#555;
 }
 
 .karmen-video{
