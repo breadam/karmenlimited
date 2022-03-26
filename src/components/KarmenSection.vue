@@ -1,15 +1,19 @@
 <template>
     <a :href="link">
         <div class="section">
-            <img class="logo" :src="image"/>
-            <h2 class="title">
-                {{title}}
-            </h2>
-            <h5 class="subtitle">
-                {{subtitle}}
-            </h5>
             <div>
-                <button>{{$t('visit')}}</button>
+                <img class="logo" :src="image"/>
+            </div>
+            <div class="description">
+                <h2 class="title">
+                    {{title}}
+                </h2>
+                <h5 class="subtitle">
+                    {{subtitle}}
+                </h5>
+                <div>
+                    <button>{{$t('visit')}}</button>
+                </div>
             </div>
         </div>
     </a>
@@ -28,6 +32,8 @@ a,a:visited,a:hover, a:focus, a:active{
 }
 
 .section{
+    display:flex;
+    flex-direction:column;
     text-align:center;
 }
 
@@ -75,6 +81,25 @@ button:hover{
     opacity:1;
     box-shadow:0px 2px 3px #333;
     transform:translateY(-4px);
+}
+
+@media screen and (max-width: 992px) {
+    .section{
+        flex-direction:row;  
+    }
+  
+    .logo{
+        width:184px;
+        margin-bottom: 0px;
+        margin-right:12px;
+    }
+
+    .description{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+    }
 }
 
 </style>

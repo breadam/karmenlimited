@@ -146,4 +146,17 @@ body,html{
   z-index:-999;
   background-color:rgba(228,227,219,0.6);
 }
+
+@media screen and (max-width: 992px) {
+  
+  .karmen-cols{
+    flex-direction:column;  
+  }
+
+  .karmen-col{
+    margin:24px 28px 12px 28px;
+  }
+
+}
+
 </style>
