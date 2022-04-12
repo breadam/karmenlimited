@@ -26,7 +26,7 @@
         <div class="karmen-col">
           
           <KarmenSection
-            link="http://guidancyeventsolutions.com" 
+            :link="guidancyURL"
             image="/assets/guidancy-logo.png"
             title="Guidanc'y"
             :subtitle="$t('guidancy-subtitle')"
@@ -37,7 +37,7 @@
         <div class="karmen-col">
           
           <KarmenSection
-            link="http://gingeristanbul.com"
+            :link="gingerURL"
             image="/assets/gingeristanbul-logo.png"
             title="Ginger"
             :subtitle="$t('ginger-subtitle')"
@@ -58,8 +58,16 @@ export default {
   components: {
     KarmenSection
   },
-  mounted(){
-    
+  computed:{
+    locale(){
+      return this.$root.$i18n.locale;
+    },
+    guidancyURL(){
+      return 'http://guidancyeventsolutions.com?lang=' + this.locale;
+    },
+    gingerURL(){
+      return 'http://gingeristanbul.com?lang=' + this.locale;
+    }
   }
 }
 </script>
