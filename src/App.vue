@@ -1,48 +1,48 @@
 <template>
   
+  <div>
+    <video class="karmen-video" src="/assets/flowers.mp4" controls="false" autoplay muted loop/>
 
-  <video class="karmen-video" src="/assets/flowers.mp4" controls="false" autoplay muted loop/>
-
-  <div class="karmen-video-overlay"></div>
-  
-  <div class="karmen-wrapper">
-    
+    <div class="karmen-video-overlay"></div>
+      
     <div class="karmen-content">
-      <div>
-        <div class="karmen-nav">
-          <div class="section left">
-          </div>
-          <div class="section right">
-            <span>
-              <select class="karmen-lang" v-model="$root.$i18n.locale">
-                <option value="tr">Türkçe</option>
-                <option value="en">English</option>
-              </select>
-            </span>
+      <div class="border">
+        <div>
+          <div class="karmen-nav">
+            <div class="section left">
+            </div>
+            <div class="section right">
+              <span>
+                <select class="karmen-lang" v-model="$root.$i18n.locale">
+                  <option value="tr">Türkçe</option>
+                  <option value="en">English</option>
+                </select>
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="karmen-cols">  
-        <div class="karmen-col">
-          
-          <KarmenSection
-            :link="guidancyURL"
-            image="/assets/guidancy-logo.png"
-            title="Guidanc'y"
-            :subtitle="$t('guidancy-subtitle')"
-          />
+        <div class="karmen-cols">  
+          <div class="karmen-col">
+            
+            <KarmenSection
+              :link="guidancyURL"
+              image="/assets/guidancy-logo.png"
+              title="Guidanc'y"
+              :subtitle="$t('guidancy-subtitle')"
+            />
 
-        </div>
+          </div>
+          <div class="separator"></div>
+          <div class="karmen-col">
+            
+            <KarmenSection
+              :link="gingerURL"
+              image="/assets/gingeristanbul-logo.png"
+              title="Ginger"
+              :subtitle="$t('ginger-subtitle')"
+            />
 
-        <div class="karmen-col">
-          
-          <KarmenSection
-            :link="gingerURL"
-            image="/assets/gingeristanbul-logo.png"
-            title="Ginger"
-            :subtitle="$t('ginger-subtitle')"
-          />
-
+          </div>
         </div>
       </div>
     </div>
@@ -87,6 +87,11 @@ body,html{
   height:100%;
 }
 
+.border{
+  border:10px solid #6b6764;
+  padding:18px 24px;
+}
+
 .karmen-content{
   position:fixed;
   top:50%;
@@ -95,20 +100,30 @@ body,html{
   font-family: 'Raleway', sans-serif;
   background-color:rgb(243, 242, 234);
   border-radius: 6px;
-  padding:18px 24px;
+  border:20px solid #c5e5cd;
   box-shadow:0px 2px 6px #777;
 }
 
 .karmen-cols{
   display:flex;
   justify-content: center;
-  
 }
 
 .karmen-col{
   display:flex;
   align-self: center;
   margin:48px 56px 24px 56px;
+}
+
+.separator{
+  border-left:10px solid #6b6764;
+  border-top:none;
+  height:85%;
+  width:0;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
 
 .karmen-nav{
@@ -162,7 +177,18 @@ body,html{
   }
 
   .karmen-col{
-    margin:24px 28px 12px 28px;
+    margin:24px 0;
+  }
+
+  .border{
+    padding:12px 12px;
+  }
+
+  .separator{
+    border-left:none;
+    width:80%;
+    height:0;
+    border-top:10px solid #6b6764;
   }
 
 }
