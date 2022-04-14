@@ -5,12 +5,12 @@
                 <img class="logo" :src="image"/>
             </div>
             <div class="description">
-                <h2 class="title">
+                <div class="title">
                     {{title}}
-                </h2>
-                <h5 class="subtitle">
+                </div>
+                <div class="subtitle">
                     {{subtitle}}
-                </h5>
+                </div>
                 <div>
                     <button>{{$t('visit')}}</button>
                 </div>
@@ -39,7 +39,7 @@ a,a:visited,a:hover, a:focus, a:active{
 
 .logo{
     width:216px;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
     border-radius:50%;
 
     transition:1s all;
@@ -53,11 +53,16 @@ a,a:visited,a:hover, a:focus, a:active{
 .title{
     color:#444;
     margin:0px;
+    font-weight: bold;
+    font-size:1.2rem;
 }
 
 .subtitle{
     color:#666;
     margin-top:2px;
+    font-weight: bold;
+    font-size:0.7rem;
+    margin-bottom:24px;
 }
 
 button{
@@ -89,7 +94,7 @@ button:hover{
     }
   
     .logo{
-        width:184px;
+        width:132px;
         margin-bottom: 0px;
         margin-right:12px;
     }
@@ -99,6 +104,14 @@ button:hover{
         justify-content: center;
         flex-direction: column;
         align-content: center;
+    }
+
+    .title{
+        font-size:1rem;
+    }
+
+    .subtitle{
+        font-size:0.6rem;
     }
 }
 
