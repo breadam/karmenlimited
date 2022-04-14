@@ -38,7 +38,7 @@ a,a:visited,a:hover, a:focus, a:active{
 }
 
 .logo{
-    width:216px;
+    width:100%;
     margin-bottom: 12px;
     border-radius:50%;
 
@@ -94,9 +94,10 @@ button:hover{
     }
   
     .logo{
-        width:132px;
+        
         margin-bottom: 0px;
         margin-right:12px;
+        flex-shrink: 0;
     }
 
     .description{
@@ -104,6 +105,7 @@ button:hover{
         justify-content: center;
         flex-direction: column;
         align-content: center;
+        margin-left:24px;
     }
 
     .title{
@@ -111,7 +113,7 @@ button:hover{
     }
 
     .subtitle{
-        font-size:0.6rem;
+        font-size:0.7rem;
     }
 }
 

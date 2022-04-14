@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="karmen-cols">  
-          <div class="karmen-col">
+          <div class="karmen-col stretch">
             
             <KarmenSection
               :link="guidancyURL"
@@ -172,6 +172,11 @@ body,html{
 
 @media screen and (max-width: 992px) {
   
+  .karmen-content{
+    border-width:10px;
+    width:90%;
+  }
+
   .karmen-cols{
     flex-direction:column;  
   }
@@ -181,14 +186,16 @@ body,html{
   }
 
   .border{
+    border-width:5px;
     padding:12px 12px;
   }
 
   .separator{
+    border-width:5px;
     border-left:none;
     width:80%;
     height:0;
-    border-top:10px solid #6b6764;
+    border-top:5px solid #6b6764;
   }
 
 }
